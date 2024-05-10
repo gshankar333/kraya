@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- style sheet links and external links for fonts and icons -->
+    
+    
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <link rel="stylesheet" href="./indexstyle.css">
+    <link rel="stylesheet" href="mobilestyle.css">
+    
+    <title>Kraya</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <!-- Navigation bar -->
+            <div class="top-nav-wrapper">
+                <div class="top-nav">
+                
+                    <div>
+                        <div class="help">
+                            <img src="phone.png" alt="" class="phone-image">
+                            <a href="#" class="need-help-button">NEED HELP?</a>
+                        </div>
+                    </div>
+                    <!-- First navigation bar -->
+                    <div class="first-menu">
+                        <div class="wishlist top-nav-options">
+                            <a href="#">WISHLIST</a>
+                            <div class="icon-counts">
+                                <img src="icons/heart-icon.png" class="nav-icon" alt="">
+                                <span class="count-icon" id="wishcount">0</span>
+                            </div>
+                            
+                        </div>
+                        <div class="vertical-line"></div>
+                        <div class="cart-option top-nav-options">
+                            <a href="#">CART</a>
+                            <div class="icon-counts">
+                                <img src="icons/bag-icon.png" class="nav-icon" alt="">
+                                <span class="count-icon" id="cart-count">0</span>
+                            </div>
+                        </div>
+                        <div class="vertical-line"></div>
+                        <div class="login-name top-nav-options">
+                            <img src="icons/user-icon.png" class="nav-icon" alt="">
+                            <a href="#">GOWRI SHANKAR</a>
+                            <i class="fa fa-lg fa-solid fa-angle-down" ></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- second navigation bar -->
+            <div class="main-nav">
+                <div class="logo">
+                    <!-- <p>KRAYA.</p> -->
+                    <img src="Kraya_logo.svg" alt="">
+                    
+                </div>
+                <div class="main-nav-wrapper">
+                    <div class="main-nav-options">
+                        <ul class="categories">
+                            <li><a href="#" id="phones">PHONE</a></li>
+                            <li><a href="#">TELEVISON</a></li>
+                            <li><a href="#">REFRIGERATOR</a></li> 
+                            <li><a href="#">LAPTOP</a></li>
+                            <li><a href="#">WASHING MACHINE</a></li>
+                            <li><a href="#">DOWNLOADS</a></li>
+                        </ul>
+
+                    </div>
+                    <div class="search-btn">
+                        <form class="hidden-search-bar" id="hidden-search-bar">
+                        <input type="search" class="search-bar" name="search-bar" id="search-bar" placeholder="Search for Products">
+                        <div class="magnifier-class"><img src="magnifying-glass-solid.svg" class="magnifier" id="go-search" alt=""></div>
+                        </form>
+                        
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <!-- Entire kraya body -->
+        <div class="kraya-full-body">
+            <!-- Data sorting bars -->
+        <div class="sort-menu-option-container">
+            <div class="sort-wrapper">
+                <div class="path sort-options">
+                    <span>HOME/MOBILES</span>
+                </div>
+                <div class="top-sort-result-wrapper">
+                    <div class="sort-result-wrapper">
+                        <div class="sort-results" id="sort-results">
+                            <span>Showing the results of the phone</span>
+                        </div>
+                    </div>
+                    <div class="sort-filter-wrapper">
+                        <div class="sort-filter sort-options">
+                            <div class="sort-heading">
+                                <span>Sort By</span>
+                            </div>
+                            <div class="ratings hover-option" id="ratings">
+                                <span><a href="#">Ratings</a></span>
+                            </div>
+                            <div class="low-high hover-option" id="low-high">
+                                <span><a href="#">Price Low - High</a></span>
+                            </div>
+                            <div class="newest hover-option" id="newest">
+                                <span><a href="#">Newest First</a></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- mobile data sorting and filters section -->
+        <div class="mobile-data-filter">
+            <div class="mobile-filter-nav">
+                <div class="mobile-sortby-wrapper">
+                    <div class="sortby-button mobile-button" id="sortby">
+                        <span>Sort By</span>
+                        <i class="fa fa-lg fa-solid fa-angle-down" ></i>
+                    </div>
+                    <div class="mobile-sort-functions" id="sortby-menu">
+                        <div class="mobile-rating-sort mobile-sortby" id="sortby-ratings">
+                            <a href="#">Ratings</a>
+                        </div>
+                        <div class="mobile-price-lowhigh-sort mobile-sortby" id="sortby-price">
+                            <a href="#">Low - High</a>
+                        </div>
+                        <div class="mobile-new-sort mobile-sortby" id="sortby-new">
+                            <a href="#">New items</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="filters-button mobile-button">
+                    <span>Filters</span>
+                    <i class="fa fa-lg fa-solid fa-angle-down" ></i>
+                </div>
+            </div>
+            <div class="mobile-filter-result" id="mobile-filter-result">
+                <span> Results</span>
+            </div>
+        </div>
+        <!-- products section body -->
+        <div class="kraya-body">
+            <!-- Desktop filters section -->
+            <div class="filter-wrapper">
+                <div class="filter-body">
+                    <div class="filter-heading side-nav" >
+                        <span class="heading">FILTERS</span>
+                        <span class="clear-head">CLEAR ALL</span>
+                    </div>
+                
+                    <div class="price-range side-nav" id="price-collapse">
+                        <span class="heading">Price</span>
+                        <i class="fa fa-lg fa-solid fa-angle-down" ></i>
+                    </div>
+                   
+                    <div class="range-slider sub-section" id="range-slider">
+                        
+                        <div id="slider-range"></div>
+                        <form class="slide-range-values">
+                            <input type="number" id="amount" class="sliderangevalues" placeholder="$100">
+                            <input type="number" id="amount2" class="sliderangevalues" placeholder="$200">
+                        </form>
+                    </div>
+                    <div class="brand side-nav" id="brand-collapse">
+                        <span class="heading">Brand</span>
+                        <i class="fa fa-lg fa-solid fa-angle-down"></i>
+                        
+                    </div>
+                    
+                    <div class="brand-options brand-subsection" id="brand">
+                        <form class="present-phone-brands" id="present-phone-brands">
+                            <div class="apple-option checkbox-option">
+                                <input type="checkbox" name="apple" id="apple" value="apple">
+                                <label class="brand-name" for="apple">Apple</label>
+                            </div>
+                            <div class="sony-option checkbox-option">
+                                <input type="checkbox" name="sony" id="sony" value="sony">
+                                <label class="brand-name" for="sony">Sony</label>
+                            </div>
+                            <div class="realme-option checkbox-option">
+                                <input type="checkbox" name="realme" id="realme" value="realme">
+                                <label class="brand-name" for="realme">realme</label>
+                            </div>
+                            <div class="vivo-option checkbox-option">
+                                <input type="checkbox" name="vivo" id="vivo" value="vivo">
+                                <label class="brand-name" for="vivo">vivo</label>
+                            </div>
+                            <div class="mi-option checkbox-option">
+                                <input type="checkbox" name="mi" id="mi" value="mi">
+                                <label class="brand-name" for="mi">xioami</label>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="battery-capacity side-nav" id="battery-collapse">
+                        <span class="heading">Battery-capacity</span>
+                        <i class="fa fa-lg fa-solid fa-angle-down" ></i>
+                    </div>
+                    <div class="battery-slider sub-section" id="battery-slider"><span>battery slider</span></div>
+                    <div class="screen-size side-nav" id="screensize-collapse">
+                        <span class="heading">screen-size</span>
+                        <i class="fa fa-lg fa-solid fa-angle-down"></i>
+                    </div>
+                    <div class="screensize-slider sub-section" id="screensize-slider"><span>screen-size slider</span></div>
+                    <div class="ram side-nav" id="ram-collapse">
+                        <span class="heading">RAM</span>
+                        <i class="fa fa-lg fa-solid fa-angle-down"></i>
+                    </div>
+                    <div class="ram-slider sub-section" id="ram-slider"><span>ram slider</span></div>
+                    <div class="customer-ratings side-nav" id="customer-rating-collapse">
+                        <span class="heading">Customer-ratings</span>
+                        <i class="fa fa-lg fa-solid fa-angle-down"></i>
+                    </div>
+                    <div class="customer-slider sub-section" id="customer-slider"><span>customer slider</span></div>
+                    <div class="camera side-nav" id="camera-collapse">
+                        <span class="heading">Camera</span>
+                        <i class="fa fa-lg fa-solid fa-angle-down"></i>
+                    </div>
+                    <div class="camera-slider sub-section" id="camera-slider"><span>camera slider</span></div>
+                    <div class="resolution side-nav" id="resolution-collapse">
+                        <span class="heading">Resolution</span>
+                        <i class="fa fa-lg fa-solid fa-angle-down"></i>
+                    </div>
+                    <div class="resolution-slider sub-section" id="resolution-slider"><span>resolution slider</span>></div>
+                    <div class="operating-system side-nav" id="os-collapse">
+                        <span class="heading">Operating System</span>
+                        <i class="fa fa-lg fa-solid fa-angle-down"></i>
+                    </div>
+                    <div class="os-slider sub-section" id="os-slider"><span>operating-system slider</span></div>
+
+                </div>
+            </div>
+            <!-- products grid section -->
+            <div class="mobile-items" id="mobile-items">
+               
+            </div>
+        </div>
+        </div>
+    </main>
+    <footer>
+        <!-- Page footer -->
+        <div class="page-footer">
+            <div class="footer-wrapper">
+                <!-- footer contact and contact sections -->
+                <div class="contact-section">
+                    <div class="stay-in-touch-subscribe">
+                        <div class="stay-in-touch-section">
+                            <h5 class="contact-heading">LET'S STAY IN TOUCH</h5>
+                            <span class="contact-body">Get updates on sales specials and more</span>
+                        </div>
+                        <form class="subscribe-bar">
+                            <input type="email" class="subscribe" placeholder="Email address">
+                            <input type="button" class="subscribe-button" value="SUBSCRIBE">
+                        </form>
+                    </div>
+                    <div class="follow-kraya-wrapper">
+                        <div class="follow-kraya">
+                            <div class="follow-kraya-description">
+                                <h5 class="contact-heading">FOLLOW KRAYA</h5>
+                                <span class="contact-body">We want to hear from you</span>
+                            </div>
+                            <div class="social-media-icons">
+                                <ul class="SM-icons">
+                                    <li class="social-icon"><a href="#"><img src="SM-icons/facebook.png" alt=""></a></li>
+                                    <li class="social-icon"><a href="#"><img src="SM-icons/twitter.png" alt=""></a></li>
+                                    <li class="social-icon"><a href="#"><img src="SM-icons/youtube.png" alt=""></a></li>
+                                    <li class="social-icon"><a href="#"><img src="SM-icons/instagram.png" alt=""></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>       
+                </div>
+                <!-- footer page-options -->
+                <div class="footer-options-wrapper">
+                    <div class="footer-options">
+                        <div class="about-card card-wrapper">
+                            <ul class="about list">
+                                <span class="footer-options-headings">ABOUT</span>
+                                <li><a href="#">About Us</a></li>
+                                <li><a href="#">Carrers</a></li>
+                                <li><a href="#">Blog</a></li>
+                                <li><a href="#">News</a></li>
+                            </ul>
+                        </div>
+                        <div class="support-card card-wrapper">
+                            <ul class="support list">
+                                <span class="footer-options-headings">SUPPORT</span>
+                                <li><a href="#">Payment</a></li>
+                                <li><a href="#">Shipping</a></li>
+                                <li><a href="#">Cancellation & Returns</a></li>
+                                <li><a href="#">FAQs</a></li>
+                            </ul>
+                        </div>
+                        <div class="policy-card card-wrapper">
+                            <ul class="policy list">
+                                <span class="footer-options-headings">POLICY</span>
+                                <li><a href="#">Terms of Use</a></li>
+                                <li><a href="#">Privacy Policy</a></li>
+                                <li><a href="#">Intellectual Property</a></li>
+                                <li><a href="#">Sitemap</a></li>
+                                <li><a href="#">Security</a></li>
+                            </ul>
+                        </div>
+                        <div class="mailus-card card-wrapper list">
+                            <h5 class="footer-options-headings">MAIL US</h5>
+                            <p class="address">17187 N. Laurel Park Dr., Ste 100 Livonia, MI 48152 USA</p>
+                        </div>
+                        <div class="chat-support-payment list">
+                            <h5 class="support-number">1800 123 4567</h5>
+                            <h5 class="service-hours">Service hours: 09:00-21:00</h5>
+                            <form class="support-button"><input type="button" class="chat-support" value="CHAT SUPPORT"></form>
+                            <div class="payment-methods">
+                                <h5 class="payment-title">PAYMENT METHODS</h5>
+                                <ul class="payment-card-images">
+                                    <li class="card-icons"><img src="payment-icons/maestro.png" class="icon-resize" alt=""></li>
+                                    
+                                    <li class="card-icons"><img src="payment-icons/ebay.png" class="icon-resize" alt=""></li>
+                                    <li class="card-icons"><img src="payment-icons/paypal.png" class="icon-resize" alt=""></li>
+                                    <li class="card-icons"><img src="payment-icons/visa.png" class="icon-resize" alt=""></li>
+                                    <li class="card-icons"><img src="payment-icons/mastercard.png" class="icon-resize" alt=""></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- copyright section footer -->
+                <div class="copyright-footer">
+                    <span>Copyright &copy; 2010 &#8226; 2018 commerce factory. All Rights Reserved</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- linking the javascript file -->
+    <script type="module" src="app.js">
+        
+    </script>
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+</body>
+</html>
